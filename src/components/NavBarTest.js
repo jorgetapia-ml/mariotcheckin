@@ -5,7 +5,7 @@ return (
   <div className="navbar">
   <nav className="navbar navbar-expand-lg navbar-dark sticky-top" style={{fontSize: 25}}>
     <div className="container">
-      <a className="navbar-brand" href="#"><img src={require("../imgs/path_to_hotel_logo.png")} alt="Hotel Logo" width={40} className="mr-2" />  Mariott </a>
+      <a className="navbar-brand" href="#"><img src={require("../imgs/path_to_hotel_logo.png")} alt="Hotel Logo" width={40} className="mr-2" />  Marriott </a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon" />
       </button>

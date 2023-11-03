@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "../css/VideoContainer.css"
 const VideoContainer = () => {
   return (
         <div className="video-container">
