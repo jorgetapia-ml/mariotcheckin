@@ -11,6 +11,8 @@ import {
 import HomePage from "./components/HomePage";
 import CheckinPage from "./components/CheckinPage";
 import ReservationPage from "./components/ReservationPage";
+import WebcamCapture from "./components/WebCam";
+import CheckinProcess from "./components/CheckinProcess";
 function App() {
     return (
         <>
@@ -33,7 +35,10 @@ function App() {
                         path="/checkin"
                         element= {<CheckinPage/>}
                     />
- 
+                    <Route
+                        path="/checkin-process"
+                        element= {<CheckinProcess/>}
+                    />
                     {/* This route is for contactus component
           with exact path "/contactus", in 
           component props we passes the imported component*/}
