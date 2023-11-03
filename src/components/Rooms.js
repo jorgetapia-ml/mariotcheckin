@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Col,  Card } from 'react-bootstrap';
 import "../css/rooms.css"
 const Rooms = () => {
     return (
@@ -9,7 +9,7 @@ const Rooms = () => {
         <Row>
             <Col>
             <Card>
-                    <img src={require("../imgs/path_to_your_hotel_room_image.png")} alt="servicio" className=" img-fluid mb-3" />
+                    <img src={require("../imgs/path_to_your_hotel_room_image.png")} alt="servicio" className=" img-fluid mb-3" style={{"height": "200px"}} />
                     <Card.Body style={{height: "380px"}}>
                         <strong><p> Habitacion individual</p></strong>
                         <p>Habitación diseñada para una sola persona. Suelen contar con una cama individual.</p>
@@ -18,7 +18,7 @@ const Rooms = () => {
             </Col>
             <Col>
                 <Card>
-                        <img src={require("../imgs/path_to_your_hotel_room_image.png")} alt="servicio" className=" img-fluid mb-3" />
+                        <img src={require("../imgs/path_to_your_hotel_room_image_2.png")} alt="servicio" className=" img-fluid mb-3" style={{"height": "200px"}} />
                         <Card.Body style={{height: "380px"}}> 
                         <strong><p> Habitación Familiar</p></strong>
                         <p>Habitación diseñada para familias, suele ser más amplia y puede tener camas adicionales o literas para niños.</p>
@@ -27,7 +27,7 @@ const Rooms = () => {
             </Col>
             <Col>
                 <Card>
-                        <img src={require("../imgs/path_to_your_hotel_room_image.png")} alt="servicio" className=" img-fluid mb-3" />
+                        <img src={require("../imgs/path_to_your_hotel_room_image_3.png")} alt="servicio" className=" img-fluid mb-3" style={{"height": "200px"}} />
                         <Card.Body style={{height: "380px"}}> 
                         <strong><p> Habitacion doble</p></strong>
                         <p>Habitación con una cama doble o dos camas individuales. Puede ser para uso individual o para dos personas.</p>
@@ -36,7 +36,7 @@ const Rooms = () => {
             </Col>
             <Col>
                 <Card>
-                        <img src={require("../imgs/path_to_your_hotel_room_image.png")} alt="servicio" className=" img-fluid mb-3" />
+                        <img src={require("../imgs/path_to_your_hotel_room_image_4.png")} alt="servicio" className=" img-fluid mb-3" style={{"height": "200px"}} />
                         <Card.Body style={{height: "380px"}}> 
                         <strong><p> Habitacion Suite</p></strong>
                         <p>Una habitación más lujosa que suele contar con un salón independiente, uno o más dormitorios y, a veces, varias instalaciones como jacuzzi.</p>

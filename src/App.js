@@ -1,52 +1,59 @@
-import './App.css';
-import NavBarTest from './components/NavBarTest';
-import "bootstrap/dist/css/bootstrap.min.css"
-import VideoContainer from './components/VideoContainer';
-import WellcomeText from "./components/WellcomeText"
-import Services from './components/Services';
-import { Container, Row } from 'react-bootstrap';
-import Footer from './components/Footer';
-import CarouselMarriott from "./components/Carousel"
-import Rooms from "./components/Rooms"
-
-
+import "./App.css";
+// importing components from react-router-dom package
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Navigate,
+} from "react-router-dom";
+ 
+// import Home component
+import HomePage from "./components/HomePage";
+import CheckinPage from "./components/CheckinPage";
+import ReservationPage from "./components/ReservationPage";
 function App() {
-  return (
-    <div className="App">
-      <NavBarTest ></NavBarTest>
-      <VideoContainer></VideoContainer>
-      <WellcomeText></WellcomeText>
-      <div className='panelRooms'>
-        <h2 style={{ textAlign: "center", padding: "2%", fontSize: "50px", color: "white"}}>
-            Available Rooms
-        </h2>
-      <Rooms></Rooms>
-      </div>
-        <div className='panel'>
-            <div className='p-5'>
-                  <h2 style={{  textAlign: "center", padding: "2%" }}>
-                  Our Services
-                  </h2>
-            </div>
-                        
-          <Container  >
-            <Row>
-              <Services name="path_to_wifi_icon" service_name="Free WiFi"></Services>
-              <Services name="path_to_restaurant_icon" service_name="Restaurant"></Services>
-              <Services name="path_to_pool_icon" service_name="Swimming Pool"></Services>
-              <Services name="path_to_transport_icon" service_name="Transportation" ></Services>
-            </Row>
-          </Container>
-          <div className='p-5'>
-             
-            </div>
-             
-
-        </div> 
-        <CarouselMarriott></CarouselMarriott>
-      <Footer></Footer>
-    </div>
-  );    
+    return (
+        <>
+            {/* This is the alias of BrowserRouter i.e. Router */}
+            <Router>
+                <Routes>
+                    {/* This route is for home component 
+          with exact path "/", in component props 
+          we passes the imported component*/}
+                    <Route
+                        exact
+                        path="/"
+                        element={<HomePage />}
+                    />
+ 
+                    {/* This route is for about component 
+          with exact path "/about", in component 
+          props we passes the imported component*/}
+                    <Route
+                        path="/checkin"
+                        element= {<CheckinPage/>}
+                    />
+ 
+                    {/* This route is for contactus component
+          with exact path "/contactus", in 
+          component props we passes the imported component*/}
+                    <Route
+                        path="/reservation"
+                        element={<ReservationPage/>}
+                    />
+ 
+                    {/* If any route mismatches the upper 
+          route endpoints then, redirect triggers 
+          and redirects app to home component with to="/" */}
+                    {/* <Redirect to="/" /> */}
+                    <Route
+                        path="*"
+                        element={<Navigate to="/" />}
+                    />
+                </Routes>
+            </Router>
+        </>
+    );
 }
-
+ 
 export default App;
