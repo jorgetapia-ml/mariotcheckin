@@ -1,0 +1,16 @@
+.imgprop{
+    width: 60px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: 0 auto;
+}
+
+.row > div{
+   flex-basis: 25%;
+   text-align: center;
+   font-size: 24px;
+   
+}
